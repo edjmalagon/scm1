@@ -6,6 +6,6 @@ node {
         app = docker.build("customphp") 
     }
     stage('Correr el contenedor') { 
-        sh 'docker run -d —name apache -p 81:80 customphp'
+        sh 'docker run -d --name apache -p 81:80 customphp'
     }
 }
